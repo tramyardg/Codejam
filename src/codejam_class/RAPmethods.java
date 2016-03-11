@@ -10,12 +10,23 @@ package codejam_class;
  * @author RAYMARTHINKPAD
  */
 public class RAPmethods {
-    public int reverseN(int initialN) {
-        int remainder = 0;
-        while(initialN != 0) {
-            remainder = remainder % 10;
-            System.out.println(remainder);
+    public int reverseN(int n) {
+        int palindrome = n;
+        int reverse = 0;
+        while(palindrome != 0) {
+            int remainder = palindrome % 10;
+            reverse = reverse * 10 + remainder;
+            palindrome = (int) Math.floor(palindrome/10);
         }
-        return 0;
+        return reverse;
     }
+    
+    public boolean isPalindrome() {
+        
+        return false;
+
+    }
+    
+    
+    
 }

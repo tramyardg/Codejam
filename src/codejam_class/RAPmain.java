@@ -10,12 +10,10 @@ package codejam_class;
  * @author RAYMARTHINKPAD
  */
 public class RAPmain {
-    public static void main(String[] args) {
-
-        RAPmethods rap = new RAPmethods();
-        int initialN = 195;
-        int r = rap.reverseN(initialN);
+    public static void main(String[] args) {  
+        RAPmethods rap = new RAPmethods(); 
     }
+    
 
 }
 
