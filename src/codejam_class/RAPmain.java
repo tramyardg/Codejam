@@ -12,7 +12,9 @@ package codejam_class;
 public class RAPmain {
     public static void main(String[] args) {  
         RAPmethods rap = new RAPmethods(); 
-    }
+        System.out.println(rap.rapRun(195));
+        
+        }
     
 
 }

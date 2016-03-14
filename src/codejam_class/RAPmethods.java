@@ -21,11 +21,25 @@ public class RAPmethods {
         return reverse;
     }
     
-    public boolean isPalindrome() {
-        
-        return false;
-
+    public boolean isPalindrome(int n) {
+        return (n==this.reverseN(n));
     }
+    
+    public String rapRun(int n) {
+        int count = 0;
+        int init = n;
+        int sum;
+        int revInit;
+        do {
+            revInit = this.reverseN(init);
+            sum = init + revInit;
+            init = sum;
+            count++;
+        }while(!this.isPalindrome(sum));
+        return count + " " + sum;
+    }
+    
+
     
     
     
