@@ -1,0 +1,57 @@
+Challenge Description:
+
+Credits: Programming Challenges by Steven S. Skiena and Miguel A. Revilla
+
+You will be given the x/y co-ordinates of several locations. 
+You will be laying out 1 cable between two of these locations. 
+In order to minimise the cost, your task is to find the shortest distance 
+between a pair of locations, so that pair can be chosen for the cable installation.
+Input sample:
+
+Your program should accept as its first argument a path to a filename. 
+The input file contains several sets of input. Each set of input starts 
+with an integer N (0<=N<=10000), which denotes the number of points in this set. 
+The next N line contains the coordinates of N two-dimensional points. 
+The first of the two numbers denotes the X-coordinate and the 
+latter denotes the Y-coordinate. The input is terminated by a set whose N=0. 
+This set should not be processed. 
+The value of the coordinates will be less than 40000 and non-negative. eg. 
+
+Input sample:
+
+5
+0 2
+6 67
+43 71
+39 107
+189 140
+0
+
+Output sample:
+
+For each set of input produce a single line of output containing a floating 
+point number (with four digits after the decimal point) which denotes the distance 
+between the closest two points. If there is no such two points in the input 
+whose distance is less than 10000, print the line INFINITY. eg. 
+
+36.2215
+
+In[1]:= (6 - 0)^2 + (67 - 2)^2
+    In[2]:= Sqrt[4261]
+    In[3]:= N[Sqrt[4261]]
+    Out[3]= 65.2763
+
+In[4]:= (43 - 6)^2 + (71 - 61)^2
+    In[5]:= Sqrt[1469]
+    In[6]:= N[Sqrt[1469]]
+    Out[6]= 38.3275
+
+In[7]:= (39 - 43)^2 + (107 - 71)^2
+    In[8]:= Sqrt[1312]
+    In[9]:= N[4 Sqrt[82]]
+    Out[9]= 36.2215
+
+In[10]:= (189 - 39)^2 + (140 - 107)^2
+    In[11]:= Sqrt[23589]
+    In[12]:= N[3 Sqrt[2621]]
+    Out[12]= 153.587
