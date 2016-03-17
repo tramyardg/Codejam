@@ -5,6 +5,7 @@
  */
 package codejam_class;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -54,11 +55,34 @@ public class ClosestPairMethods {
         return intF;
     }
     
-//    public int[] intRes(int[] intF) {
-//        System.out.println(intF.length);
-//        int[] intres = {};
-//       
-//        return intres;
-//    }
+    public ArrayList intRes(int[] intF) {
+        double elem;
+        ArrayList al = new ArrayList();
+        for(int i = 0; i < (intF.length-numP); i+=2) {
+            int x2 = intF[i+2];
+            int x1 = intF[i];
+            int y2 = intF[i+3];
+            int y1 = intF[i+1];
+            elem = Math.pow(Math.abs(x2 - x1), 2) + 
+                    Math.pow(Math.abs(y2 - y1), 2);
+            al.add(Math.sqrt(elem));
+        }
+        return al;
+    }
+    
+    public void determineMin() {
+        ArrayList resAl = this.intRes(this.arrayIntForm(this.getStringRes()));
+        for(int i = 0; i < resAl.size(); i++) {
+            System.out.println("-->"+resAl.get(i));
+            resAl.toArray();
+//            if(resAl.get(i) > resAl.get(i+1)) {
+//                
+//            }
+        }        
+    }
+    
+    
+    
+
     
 }

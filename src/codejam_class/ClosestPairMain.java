@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package codejam_class;
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 /**
@@ -18,7 +18,16 @@ public class ClosestPairMain {
         int numPoints = scan.nextInt();
         
         cp.scanner(numPoints);
-        System.out.println(Arrays.toString(cp.arrayIntForm(cp.getStringRes())));
+//        System.out.println(Arrays.toString(cp.arrayIntForm(cp.getStringRes())));
+        System.out.println(cp.intRes(cp.arrayIntForm(cp.getStringRes())));
+        cp.determineMin();
+        //3-1->2^2->4
+        //3-2->1^2->1
+        //=5
+        
+        //6-3->3^2->9
+        //4-3->1^2->1
+        //10
 
 
     }
