@@ -17,20 +17,7 @@ public class ClosestPairMain {
         Scanner scan = new Scanner(System.in);
         int numPoints = scan.nextInt();
         
-        cp.scanner(numPoints);
-//        System.out.println(Arrays.toString(cp.arrayIntForm(cp.getStringRes())));
-        System.out.println(cp.intRes(cp.arrayIntForm(cp.getStringRes())));
-        cp.determineMin();
-        //3-1->2^2->4
-        //3-2->1^2->1
-        //=5
+        cp.storeUserInput(numPoints);
         
-        //6-3->3^2->9
-        //4-3->1^2->1
-        //10
-
-
     }
-    
-    
 }

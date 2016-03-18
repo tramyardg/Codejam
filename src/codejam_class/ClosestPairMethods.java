@@ -5,8 +5,8 @@
  */
 package codejam_class;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -14,75 +14,65 @@ import java.util.Scanner;
  * @author RAYMARTHINKPAD
  */
 public class ClosestPairMethods {
-    private static String[] arrN;
-    private static int numP = 0;
-    private static String intString ="";
-    
-    public void scanner(int n) {
-        String res = "";
-        Scanner scan = new Scanner(System.in);
-        arrN = new String[n];
-        numP = n;
-        for(int i = 0; i < n; i++) {
-            arrN[i] = scan.nextLine();
-        }
-        intString = stripStr(this.reformatStr(arrN));
-    }
-    
-    public String getStringRes(){
-        return intString;
-    }
-   
-    public String reformatStr(String[] strArr) {
-        return Arrays.toString(strArr);
-    }
-    
-    public String stripStr(String res) {
-        String strArr[] = res.split("\\D");
-        String str = "";
-        for(String t: strArr) {
-            str += t;
-        }
-        return str;
-    }
-    
-    public int[] arrayIntForm(String strRes) {
-        int[] intF = new int[strRes.length()];
-        for(int i = 0; i < strRes.length(); i++) {
-            char ch = strRes.charAt(i);
-            intF[i] = Integer.parseInt(String.valueOf(ch));
-        }
-        return intF;
-    }
-    
-    public ArrayList intRes(int[] intF) {
-        double elem;
-        ArrayList al = new ArrayList();
-        for(int i = 0; i < (intF.length-numP); i+=2) {
-            int x2 = intF[i+2];
-            int x1 = intF[i];
-            int y2 = intF[i+3];
-            int y1 = intF[i+1];
-            elem = Math.pow(Math.abs(x2 - x1), 2) + 
-                    Math.pow(Math.abs(y2 - y1), 2);
-            al.add(Math.sqrt(elem));
-        }
-        return al;
-    }
-    
-    public void determineMin() {
-        ArrayList resAl = this.intRes(this.arrayIntForm(this.getStringRes()));
-        for(int i = 0; i < resAl.size(); i++) {
-            System.out.println("-->"+resAl.get(i));
-            resAl.toArray();
-//            if(resAl.get(i) > resAl.get(i+1)) {
-//                
-//            }
-        }        
-    }
-    
-    
-    
 
-    
+    private int numberPoints;
+    private final DecimalFormat twoDForm = new DecimalFormat("#.##");
+    private ArrayList finalArl;
+
+    public void storeUserInput(int numP) {
+        Scanner scan = new Scanner(System.in);
+        ArrayList<Integer> arl = new ArrayList<>();
+        for (int i = 0; i < numP; i++) {
+            int j = i + 1;
+            System.out.print("Enter x" + j + ": ");
+            int x = scan.nextInt();
+            System.out.print("Enter y" + j + ": ");
+            int y = scan.nextInt();
+            arl.add(x);
+            arl.add(y);
+        }
+        this.numberPoints = numP;
+        this.storeArrayList(arl);
+        System.out.println(this.returnMinVal(this.finalArl));
+
+    }
+
+    public void storeArrayList(ArrayList<Integer> al) {
+        ArrayList list = new ArrayList();
+        double res;
+        for (int i = 0; i < (al.size() - 3); i += 2) {
+            int x1 = al.get(i);
+            int x2 = al.get(i + 2);
+            int y1 = al.get(i + 1);
+            int y2 = al.get(i + 3);
+
+            res = this.computeD(x1, x2, y1, y2);
+            list.add(twoDForm.format(res));
+
+        }
+        this.finalArl = list;
+    }
+
+    public double computeD(int x1, int x2, int y1, int y2) {
+        return Math.sqrt((Math.pow((Math.abs(x2 - x1)), 2))
+                + (Math.pow((Math.abs(y2 - y1)), 2)));
+    }
+
+    public double returnMinVal(ArrayList arl) {
+        Object minObj = arl.get(0);
+        String minS = String.valueOf(minObj);
+        double minDouble = 0.0;
+        for(int i = 0; i < arl.size()-1; i++) {
+            Object next = arl.get(i);
+            String nextS = String.valueOf(next);
+            double nextDouble = Double.parseDouble(nextS);
+            minDouble = Double.parseDouble(minS);
+            if(nextDouble<minDouble) {
+                minDouble = nextDouble;
+            }
+            
+        }
+        return minDouble;
+    }
+
 }
