@@ -15,7 +15,6 @@ import java.util.Scanner;
  */
 public class ClosestPairMethods {
 
-    private int numberPoints;
     private final DecimalFormat twoDForm = new DecimalFormat("#.##");
     private ArrayList finalArl;
 
@@ -31,7 +30,6 @@ public class ClosestPairMethods {
             arl.add(x);
             arl.add(y);
         }
-        this.numberPoints = numP;
         this.storeArrayList(arl);
         System.out.println(this.returnMinVal(this.finalArl));
 
