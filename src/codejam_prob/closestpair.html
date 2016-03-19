@@ -21,68 +21,79 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
         <title>Closest pair challenge</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-size: small;
+                font-family: verdana, arial, helvetica, sans-serif;
+            }
+            #content {
+                margin: 2% 5% 0 5%;
+            }
+        </style>
     </head>
     <body>
-        <a href="http://codejav.co.nf/index.html">Back</a>
-        <div>
-            <h1>Closest pair challenge</h1>
-            <h2>Challenge Description:</h2>
+        <div id="content">
+            <a href="http://codejav.co.nf/index.html">Back</a>
+            <div>
+                <h1>Closest pair challenge</h1>
+                <h2>Challenge Description:</h2>
 
-            <p>Credits: Programming Challenges by Steven S. Skiena and Miguel A. Revilla</p>
-            <p>
-                You will be given the x/y co-ordinates of several locations. <br>
-                You will be laying out 1 cable between two of these locations.<br> 
-                In order to minimise the cost, your task is to find the shortest distance <br>
-                between a pair of locations, so that pair can be chosen for the cable installation.<br>
-            </p>
+                <p>Credits: Programming Challenges by Steven S. Skiena and Miguel A. Revilla</p>
+                <p>
+                    You will be given the x/y co-ordinates of several locations. <br>
+                    You will be laying out 1 cable between two of these locations.<br> 
+                    In order to minimise the cost, your task is to find the shortest distance <br>
+                    between a pair of locations, so that pair can be chosen for the cable installation.<br>
+                </p>
 
-            <p>
-                Your program should accept as its first argument a path to a filename. <br>
-                The input file contains several sets of input. Each set of input starts<br> 
-                with an integer N (0<=N<=10000), which denotes the number of points in this set. <br>
-                The next N line contains the coordinates of N two-dimensional points. <br>
-                The first of the two numbers denotes the X-coordinate and the <br>
-                latter denotes the Y-coordinate. The input is terminated by a set whose N=0. <br>
-                This set should not be processed. <br>
-                The value of the coordinates will be less than 40000 and non-negative. eg.<br>                 
-            </p>
+                <p>
+                    Your program should accept as its first argument a path to a filename. <br>
+                    The input file contains several sets of input. Each set of input starts<br> 
+                    with an integer N (0<=N<=10000), which denotes the number of points in this set. <br>
+                    The next N line contains the coordinates of N two-dimensional points. <br>
+                    The first of the two numbers denotes the X-coordinate and the <br>
+                    latter denotes the Y-coordinate. The input is terminated by a set whose N=0. <br>
+                    This set should not be processed. <br>
+                    The value of the coordinates will be less than 40000 and non-negative. eg.<br>                 
+                </p>
 
-            <b>Input sample:</b>
-            <p>
-                5<br>
-                0 2<br>
-                6 67<br>
-                43 71<br>
-                39 107<br>
-                189 140<br>
-                0<br>
-            </p>                
+                <b>Input sample:</b>
+                <p>
+                    5<br>
+                    0 2<br>
+                    6 67<br>
+                    43 71<br>
+                    39 107<br>
+                    189 140<br>
+                    0<br>
+                </p>                
 
-            <b>Output sample:</b>
+                <b>Output sample:</b>
+                <p>
+                    For each set of input produce a single line of output containing a floating <br>
+                    point number (with four digits after the decimal point) which denotes the distance <br>
+                    between the closest two points. If there is no such two points in the input <br>
+                    whose distance is less than 10000, print the line INFINITY. eg. 
+                </p>
+                <p>36.2215</p>
+            </div>
+            <script type="text/javascript">
+                <!--
+            function toggle_visibility(id) {
+                    var e = document.getElementById(id);
+                    if (e.style.display == 'block')
+                        e.style.display = 'none';
+                    else
+                        e.style.display = 'block';
+                }
+                //-->
+            </script>
             <p>
-                For each set of input produce a single line of output containing a floating <br>
-                point number (with four digits after the decimal point) which denotes the distance <br>
-                between the closest two points. If there is no such two points in the input <br>
-                whose distance is less than 10000, print the line INFINITY. eg. 
-            </p>
-            <p>36.2215</p>
+                <button onclick="toggle_visibility('src');">Source code</button>
+            <div style="display:none; width:50%;" id="src">
+                <script src="https://gist.github.com/tramyardg/4f953711edd4e931a53e.js"></script>
+            </div>
+            <br/><a href="http://codejav.co.nf/index.html">Back</a>
         </div>
-        <script type="text/javascript">
-            <!--
-        function toggle_visibility(id) {
-                var e = document.getElementById(id);
-                if (e.style.display == 'block')
-                    e.style.display = 'none';
-                else
-                    e.style.display = 'block';
-            }
-            //-->
-        </script>
-        <p>
-            <button onclick="toggle_visibility('src');">Source code</button>
-        <div style="display:none;" id="src">
-            <script src="https://gist.github.com/tramyardg/4f953711edd4e931a53e.js"></script>
-        </div>
-        <br/><a href="http://codejav.co.nf/index.html">Back</a>
     </body>
 </html>
