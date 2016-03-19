@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+Copyright (C) 2016 RAYMARTHINKPAD
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+-->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Reverse add challenge</title>
+    </head>
+    <body>
+
+        <a href="http://codejav.co.nf/index.html">Back</a>
+        <h1>Coding challenges</h1>
+        <h3>Reverse add challenge</h3>
+        <p>
+            The problem is as follows: choose a number, <br/>
+            reverse its digits and add it to the original. 
+
+            If the sum is not a palindrome (which means, <br/>
+            it is not the same number from left to right and right to left), repeat this procedure.
+        </p>
+
+        <b>For example:</b><br/>
+
+        195 (initial number) + 591 (reverse of initial number) = 786<br/>
+
+        786 + 687 = 1473<br/>
+
+        1473 + 3741 = 5214<br/>
+
+        5214 + 4125 = 9339 (palindrome)<br/>
+        <p>
+            In this particular case the palindrome 9339 appeared after the 4th addition. <br/>
+            This method leads to palindromes in a few step for almost all of the integers. <br/>
+            But there are interesting exceptions. <br/>
+            196 is the first number for which no palindrome has been found. <br/>
+            It is not proven though, that there is no such a palindrome.
+        </p>
+        <b>Input sample:</b>
+        <p>
+            Your program should accept as its first argument a path to a filename. <br/>
+            Each line in this file is one test case. <br/>
+            Each test case will contain an integer n is less than 10,000. <br/>
+            Assume each test case will always have an answer and <br/>
+            that it is computable with less than 100 iterations (additions).<br/>
+        </p>
+
+        <p>
+            <b>Output sample:</b>
+        <p>
+            For each line of input, generate a line of output which is the <br/>
+            number of iterations (additions) to compute the palindrome and <br/>
+            the resulting palindrome. (they should be on one line and separated <br/>
+            by a single space character).
+        </p>
+        <b>For example:</b><br/>
+
+        4 9339
+
+    <script type="text/javascript">
+    <!--
+        function toggle_visibility(id) {
+            var e = document.getElementById(id);
+            if (e.style.display == 'block')
+                e.style.display = 'none';
+            else
+                e.style.display = 'block';
+        }
+    //-->
+    </script>
+    <p>
+        <button onclick="toggle_visibility('src');">Source code</button>
+    <div style="display:none;" id="src">
+        <script src="https://gist.github.com/tramyardg/187b124111c10a873626.js"></script>
+    </div>
+
+
+<br/><a href="http://codejav.co.nf/index.html">Back</a>
+</body>
+</html>
+

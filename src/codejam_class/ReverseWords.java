@@ -21,18 +21,18 @@ import java.util.Scanner;
       * @param args 
       * Get the number of case(s) and iterate n times
       */
-    public static  void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int numberOfCase = scan.nextInt();
-        System.out.println(result(numberOfCase));
-    }
+//    public static  void main(String[] args) {
+//        Scanner scan = new Scanner(System.in);
+//        int numberOfCase = scan.nextInt();
+//        System.out.println(result(numberOfCase));
+//    }
     
     /**
      * Output the result
      * @param n
      * @return 
      */
-    public static String result(int n){
+    public String result(int n){
         String input;
         Scanner scan = new Scanner(System.in);
         String res = "";
@@ -50,7 +50,7 @@ import java.util.Scanner;
      * @param words
      * @return 
      */
-    public static String[] storeStrArry(String words) {
+    public String[] storeStrArry(String words) {
         String[] str = words.split(" ");
         return str;
     }
@@ -60,7 +60,7 @@ import java.util.Scanner;
      * @param str
      * @return 
      */
-    public static String reverseIt(String[] str) {
+    public String reverseIt(String[] str) {
         List<String> list = Arrays.asList(str);
         Collections.reverse(list);
         
