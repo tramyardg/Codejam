@@ -65,7 +65,6 @@ import java.util.Scanner;
         Collections.reverse(list);
         
         str = (String[]) list.toArray(); 
-//        System.out.println(Arrays.toString(str));
         String joined = String.join(" ", str);
         return joined;
     }

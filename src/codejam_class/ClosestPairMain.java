@@ -12,12 +12,18 @@ import java.util.Scanner;
  * @author RAYMARTHINKPAD
  */
 public class ClosestPairMain {
-    public static  void main(String[] args) {
+
+    public static void main(String[] args) {
         ClosestPairMethods cp = new ClosestPairMethods();
-        Scanner scan = new Scanner(System.in);
-        int numPoints = scan.nextInt();
+        int numPoints = 0;
+        do {
+            
+            Scanner scan = new Scanner(System.in);
+            System.out.print("Enter number of points >=3: ");
+            numPoints = scan.nextInt();
+            
+        } while (numPoints < 3);
         
         cp.storeUserInput(numPoints);
-        
     }
 }
