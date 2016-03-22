@@ -5,6 +5,8 @@
  */
 package codejam_class;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author RAYMARTHINKPAD
@@ -12,18 +14,21 @@ package codejam_class;
 public class fortesting {
     
     public static void main(String[] args) {
-        System.out.println(isPalindrome(121));
-        
-        int[] arr = {1, 4, 3, 5, 2, 6, 3, 1, 0};
-        int max = arr[0];
-        int init;
-        int next;
-        for(int i =0; i < arr.length-1; i++) {
-            if(arr[i]>max) {
-                max = arr[i];
-            }
-        }
-        System.out.println(max);
+//        System.out.println(isPalindrome(121));
+//        
+//        int[] arr = {1, 4, 3, 5, 2, 6, 3, 1, 0};
+//        int max = arr[0];
+//        int init;
+//        int next;
+//        for(int i =0; i < arr.length-1; i++) {
+//            if(arr[i]>max) {
+//                max = arr[i];
+//            }
+//        }
+//        System.out.println(max);
+                System.out.println((gcd(24,36)));
+
+//        System.out.println(returnGCD(gcd(24,36)));
                 
         
     }
@@ -47,5 +52,39 @@ public class fortesting {
         
         return n==reverse;
     }
+    
+    public static ArrayList gcd(int a, int b) {
+        //determine which one is less
+        int l;
+        int s;
+        ArrayList al = new ArrayList();
+        if(a > b) {
+            l = a;
+            s = b;
+        } else {
+            l = b;
+            s = a;
+        }
+        for(int i = 1; i < l; i++) {
+            int cdl = l % i;
+            
+            if(cdl == 0) {
+                int cd2 = s % i;
+                if(cd2 == 0) {
+                    al.add(i);
+                }
+            }
+        }
+        return al;
+    }
+    
+    public static int returnGCD(ArrayList al) {
+        Object obj = al.get(al.size()-1);
+        String gcdStr = String.valueOf(obj);
+        int gcdInt = Integer.parseInt(gcdStr);
+        return gcdInt;
+    }
+    
+    
     
 }
