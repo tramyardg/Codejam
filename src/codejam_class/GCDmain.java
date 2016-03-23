@@ -25,7 +25,8 @@ public class GCDmain {
 
     public static void main(String[] args) {
         GCD gcd = new GCD();
-        System.out.println(gcd.run(780, 550));
+//        System.out.println(gcd.run(120, 500));
+        System.out.println(gcd.EuclideanAlgorithm(91, 287));
     }
 
 }

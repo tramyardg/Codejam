@@ -26,9 +26,6 @@ public class PrimeFactor {
         this.user_input = input;
 
         System.out.println(this.retDivisibleP(user_input));
-        int[] arrInt = this.convertAltoArr(this.retDivisibleP(user_input));
-        System.out.println(this.result(arrInt, input));
-//        System.out.println(Arrays.toString(this.convertAltoArr(this.retDivisibleP(user_input))));
         
     }
 
@@ -60,27 +57,6 @@ public class PrimeFactor {
         return arr;
     }
     
-    public String result(int[] arr, int input) {
-        input = this.user_input;
-        int count = 0;
-        for(int i = 0; i < arr.length; i++){
-            int q = input / arr[i];
-            int r=0;
-            if(q>1) {
-                r = q % arr[i];
-                count++;
-            }
-            if(r==0){
-                this.user_input = q;
-            }
-            
-            
-        }
-        // [ 7 11 13 ]
-        // 7007
-        System.out.println(count);
-        
-        return "-";
-    }
+    
  
 }
