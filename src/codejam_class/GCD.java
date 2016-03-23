@@ -75,46 +75,27 @@ public class GCD {
     } 
     
     public int EuclideanAlgorithm(int a, int b) {
-        // determine which one is smaller and larger
-        // ex: l = 287, s = 91
         int l = this.returnLarger(a, b);
         int s = this.returnSmaller(a, b);
-        
-        // remainder : larger modulo smaller
         int r; 
-        // divisor: if the remainder becomes zero, this means 
-        // we have a divisor; we can divide
-        int d = 0;
-        
-        // do the looping until the remainder is not zero
         do {
-            // ex: 287 % 91 = 14
-            //     l   %  s = r
-            // r = 14
-            r = l % s;
-            // if r is not zero then continue
-            // l = 91
-            // s = 14
+            // if l % s = 0, then return
+            // l = s, 
+            // s = 0
+            // return l
+            
             /*
-            Position of this is important;
-            check r before assignning value
+            Example:
+                6%3 ---- 0
+                l ---- 3
+                s ---- 0
+                3
             */
-            if(r==0) {
-                d = l/s;
-            }
+                  
+            r = l % s;
             l = s;
             s = r;
-            
-            // r is not zero then loop again
-            // now l = 91
-            //     s = 14
-            
-            // second iteration = 91%14=7
-            // again r is not zero so continue
-            // now l = 14, s = 7
-            
-            // third iteration = 14%7=0
         }while(r!=0);
-        return d;
+        return l;
     }
 }
