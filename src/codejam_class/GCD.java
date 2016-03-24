@@ -29,7 +29,7 @@ public class GCD {
         ArrayList al = new ArrayList();
         int l = this.returnLarger(a, b);
         int s = this.returnSmaller(a, b);
-        for (int i = 1; i < s; i++) {
+        for (int i = 1; i < l; i++) {
             int cdl = l % i;
             if (cdl == 0) {
                 int cd2 = s % i;
