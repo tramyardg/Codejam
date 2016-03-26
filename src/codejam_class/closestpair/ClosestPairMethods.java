@@ -1,4 +1,4 @@
-package codejam_class;
+package codejam_class.closestpair;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

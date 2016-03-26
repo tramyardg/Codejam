@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package codejam_class;
+package codejam_class.gcd;
 
 /**
  *
@@ -25,8 +25,8 @@ public class GCDmain {
 
     public static void main(String[] args) {
         GCD gcd = new GCD();
-        System.out.println(gcd.run(27, 180));
-//        System.out.println(gcd.EuclideanAlgorithm(4, 12));
+        System.out.println(gcd.run(91, 287));
+        System.out.println(gcd.EuclideanAlgorithm(91, 287));
     }
 
 }

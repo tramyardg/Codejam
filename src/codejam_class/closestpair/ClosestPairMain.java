@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package codejam_class;
+package codejam_class.closestpair;
 
 import java.util.Scanner;
 

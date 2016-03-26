@@ -37,6 +37,7 @@ public class fortesting {
         int[] arr = {2, 1, 9, 6, 4};
         sortArr(arr);
         sortArrRev(arr);
+        adding2Arr();
     }
 
     /**
@@ -114,5 +115,17 @@ public class fortesting {
         Collections.sort(al, Collections.reverseOrder());
         System.out.println(al);
     }
+    
+    public static void adding2Arr() {
+        int[] a = {1,2,3,1,1};
+        int[] b = {1,1,2,3,1};
+        int sum = 0;
+        for(int i = 0; i < a.length; i++) {
+            sum += a[i]+b[i];
+        }
+        System.out.println(sum);
+    }
+    
+    
 
 }

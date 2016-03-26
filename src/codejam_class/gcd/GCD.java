@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package codejam_class;
+package codejam_class.gcd;
 
 import java.util.ArrayList;
 
@@ -93,6 +93,10 @@ public class GCD {
             */
                   
             r = l % s;
+            
+            System.out.println("l -- " + l);
+            System.out.println("s -- " + s);
+            System.out.println("r -- " + r);
             l = s;
             s = r;
         }while(r!=0);
