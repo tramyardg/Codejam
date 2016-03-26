@@ -16,17 +16,6 @@ import java.util.Scanner;
  * @author RAYMARTHINKPAD
  */
  public class ReverseWords {
-     /**
-      * 
-      * @param args 
-      * Get the number of case(s) and iterate n times
-      */
-//    public static  void main(String[] args) {
-//        Scanner scan = new Scanner(System.in);
-//        int numberOfCase = scan.nextInt();
-//        System.out.println(result(numberOfCase));
-//    }
-    
     /**
      * Output the result
      * @param n

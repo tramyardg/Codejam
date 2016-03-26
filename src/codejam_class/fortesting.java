@@ -6,6 +6,9 @@
 package codejam_class;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * s
@@ -31,6 +34,9 @@ public class fortesting {
 //        System.out.println(primeFactor());
 
 //        System.out.println(returnGCD(gcd(24,36)));
+        int[] arr = {2, 1, 9, 6, 4};
+        sortArr(arr);
+        sortArrRev(arr);
     }
 
     /**
@@ -83,6 +89,30 @@ public class fortesting {
         String gcdStr = String.valueOf(obj);
         int gcdInt = Integer.parseInt(gcdStr);
         return gcdInt;
+    }
+
+    /*
+    Sort by ascending.
+    */
+    public static void sortArr(int[] arr) {
+        ArrayList al = new ArrayList();
+        Arrays.sort(arr);
+        for (int i = 0; i < arr.length; i++) {
+            al.add(arr[i]);
+        }
+        System.out.println(al);
+    }
+
+    /*
+    Sort by descending.
+    */
+    public static void sortArrRev(int[] arr) {
+        List al = new ArrayList();
+        for (int i = 0; i < arr.length; i++) {
+            al.add(arr[i]);
+        }
+        Collections.sort(al, Collections.reverseOrder());
+        System.out.println(al);
     }
 
 }
