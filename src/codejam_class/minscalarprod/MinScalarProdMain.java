@@ -15,7 +15,6 @@ public class MinScalarProdMain {
         MinScalarProd msp = new MinScalarProd();
         msp.setNumCase(numCase); 
         msp.userInput(msp.getNumCase());
-        
-//        System.out.println(msp.getNumCase());
+        msp.displayOutput();
     }
 }

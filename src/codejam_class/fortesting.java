@@ -117,11 +117,11 @@ public class fortesting {
     }
     
     public static void adding2Arr() {
-        int[] a = {1,2,3,1,1};
-        int[] b = {1,1,2,3,1};
+        int[] a = {-5,1,3};
+        int[] b = {-2,1,4};
         int sum = 0;
         for(int i = 0; i < a.length; i++) {
-            sum += a[i]+b[i];
+            sum += a[i]*b[i];
         }
         System.out.println(sum);
     }
