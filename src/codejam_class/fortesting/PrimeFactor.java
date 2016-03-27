@@ -1,4 +1,4 @@
-package codejam_class;
+package codejam_class.fortesting;
 
 import java.util.ArrayList;
 import java.util.Arrays;
