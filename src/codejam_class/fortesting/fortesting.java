@@ -5,6 +5,7 @@
  */
 package codejam_class.fortesting;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -17,7 +18,7 @@ import java.util.List;
  */
 public class fortesting {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 //        System.out.println(isPalindrome(121));
 //        
 //        int[] arr = {1, 4, 3, 5, 2, 6, 3, 1, 0};
@@ -34,10 +35,12 @@ public class fortesting {
 //        System.out.println(primeFactor());
 
 //        System.out.println(returnGCD(gcd(24,36)));
-        int[] arr = {2, 1, 9, 6, 4};
-        sortArr(arr);
-        sortArrRev(arr);
-        adding2Arr();
+//        int[] arr = {2, 1, 9, 6, 4};
+//        sortArr(arr);
+//        sortArrRev(arr);
+//        adding2Arr();
+        Connect c = new Connect();
+        c.connectToAndQueryDatabase("SYSTEM", "admin");
     }
 
     /**
